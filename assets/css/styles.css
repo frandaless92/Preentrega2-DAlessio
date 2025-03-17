@@ -1,0 +1,611 @@
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins", sans-serif;
+    }
+
+    /* Paleta de colores */
+    :root {
+        --negro: #0a0a0a;
+        --violeta: #7a1fa2;
+        --rosa: #e91e63;
+        --rosado-claro: #f48fb1;
+        --blanco: #ffffff;
+    }
+
+    /* Estilos globales */
+    body {
+        background-color: var(--negro);
+        color: var(--blanco);
+        margin: 0;
+        padding: 0;
+    }
+
+    /* ENCABEZADO */
+    header {
+        background-color: var(--negro);
+        padding: 15px 20px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    /* Logo */
+    .logo img {
+        max-width: 150px;
+    }
+
+    /* Menú */
+    .menu-principal ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    /* Mobile First: Estilo cerrado del menú */
+    .menu-principal {
+        display: none;
+    }
+
+    /* Botón de menú hamburguesa */
+    .menu-toggle {
+        background: none;
+        border: none;
+        font-size: 30px;
+        cursor: pointer;
+        color: var(--blanco);
+    }
+
+    /* Estilo cuando el menú está activo */
+    .menu-principal.active {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Links del menú */
+    .menu-principal a {
+        text-decoration: none;
+        color: var(--blanco);
+        font-weight: 600;
+        padding: 10px;
+        border-radius: 5px;
+        transition: background 0.3s ease;
+    }
+
+    .menu-principal a:hover {
+        background: var(--rosa);
+    }
+
+    /* SECCIÓN INTRO */
+    .intro {
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .intro h1{
+        font-weight: bolder;
+        color: var(--violeta);
+    }
+
+    .intro p{
+        font-style: italic;
+        margin: 0;
+    }
+
+    /* SECCIÓN DESTACADOS */
+    .highlights {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+                "seccion1"
+                "seccion2"
+                "seccion3";
+        gap: 20px;
+        padding: 20px;
+    }
+
+    /* Cada tarjeta */
+    .highlight {
+        background: var(--violeta);
+        color: var(--blanco);
+        padding: 15px;
+        border-radius: 10px;
+        text-align: center;
+        transition: transform 0.3s ease;
+    }
+
+    .highlight:hover {
+        transform: scale(1.05);
+    }
+
+    .highlight h3 {
+        font-style: italic;
+        font-weight: bold;
+    }
+
+    .highlight video{
+        max-width: 350px;
+    }
+
+    /* Estilo de Tarjeta Global */
+    .globarcard-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .globalcard {
+        background-color: var(--violeta);
+        color: var(--blanco);
+        text-align: center;
+        align-content: center;
+        margin:20px;
+        padding: 15px;
+        border-radius: 10px;
+        transition: transform 0.3s ease;
+    }
+
+    .globalcard-form {
+        text-align: center;
+        color: var(--blanco);
+        background-color: var(--violeta);
+        margin:20px;
+        padding: 15px;
+        border-radius: 10px;
+        transition: transform 0.3s ease;
+    }
+
+    .globalcard-form:hover {
+        transform: scale(1.05);
+    }
+
+    .globalcard-form p {
+        font-weight: 600;
+    }
+
+    /*Estilo para el Formulario*/
+
+    .globalform {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .globalform input{
+        width: 200px;
+        text-align: center;
+    }
+
+    .globalform textarea{
+        resize: none;
+        width: 250px;
+    }
+
+    .globalform button{
+        color: var(--blanco);
+        background-color: var(--negro);
+        width: 100px;
+    }
+
+    .globalform button:hover{
+        transform: scale(1.15);
+    }
+
+    .globalcard:hover {
+        transform: scale(1.05);
+    }
+
+    .globalcard h2 {
+        text-decoration: underline;
+        font-weight: 600;
+        margin-bottom: 16px;
+    }
+
+    .globalcard img {
+        width: 50px;
+        height: auto;
+        transition: transform 0.3s ease;
+    }
+
+    .globalcard img:hover{
+        transform: scale(1.25);
+    }
+
+    /*Estilos para apartado Sobre Nosotros*/
+    .about-us {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+                "seccion1"
+                "seccion2"
+                "seccion3";
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .about-text h3 {
+        color: var(--violeta);
+        font-weight: bold;
+        text-decoration: underline;
+    }
+
+    .about-text p {
+        text-align: justify;
+    }
+
+    .about-experience {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .about-partners {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        background-color: var(--violeta);
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+    .about-partners p {
+        color: var(--blanco);
+    }
+
+    .about-partners h3 {
+        color: var(--blanco);
+    }
+
+    .about-image:hover {
+        transform: scale(1.25);
+    }
+
+    /*Estilos apartado Servicios*/
+
+    .equipo-image img {
+        max-width: 360px;
+        max-height: 250px;
+        margin-bottom: 50px;
+    }
+
+    .equipo-container {
+        text-align: center;
+    }
+
+    .equipo-container h1 {
+        font-weight: bolder;
+    }
+
+    .subtitle {
+        font-style: italic;
+    }
+
+    .equipo-container h2 {
+        font-weight: bold;
+    }
+    .equipo {
+        background-color: var(--violeta);
+        color: var(--blanco);
+        border-radius: 15px;
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .packs {
+        display: grid;
+        grid-template-columns: 1fr;
+        background-color: var(--violeta);
+        color: var(--blanco);
+        border-radius: 15px;
+        margin: 10px;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .packs h2 {
+        font-weight: bolder;
+    }
+
+    .packs p {
+        margin-left: 15px;
+    }
+
+    .info-extra {
+        background-color: var(--violeta);
+        color: var(--blanco);
+        border-radius: 15px;
+        margin: 10px;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .info-extra h2 {
+        font-weight: bolder;
+    }
+
+    .extras ul {
+        padding-left: 0px;
+    }
+    .extras li {
+        list-style: none;
+    }
+
+    /*Estilos para Galería*/
+    .galery-main {
+        text-align: center;
+        color: var(--blanco);
+        background-color: var(--violeta);
+        border-radius: 15px;
+        padding: 15px;
+        margin: 15px;
+    }
+
+    .galery-main h2 {
+        font-weight: bolder;
+        margin-top: 20px;
+    }
+
+    .galery-main h3 {
+        margin: 40px 0px;
+        padding: 10px;
+        text-decoration: underline;
+        background-color: var(--negro);
+    }
+
+    .galery {
+        display: grid;
+        grid-template-rows: 1fr;
+        justify-items: center;
+        gap: 5px;
+    }
+
+    .galery img {
+        width: 300px;
+        height: 220px;
+    }
+
+    .galery img:hover {
+        transform: scale(1.2);
+    }
+
+    /* ✅ FOOTER */
+    footer {
+        font-size: 10px;
+        color: var(--blanco);
+        background: var(--negro);
+        padding: 20px;
+        text-align: left;
+    }
+
+    footer a {
+        text-decoration: none;
+        font-weight: 600;   
+        color: var(--blanco);
+    }
+
+    footer h3 {
+        font-size: 12px;
+        text-decoration: underline;
+    }
+
+    footer a:hover {
+        color: var(--rosa);
+    }
+
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .subfooter-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    .subfooter-container p{
+        margin-bottom: 0px !important;
+    }
+
+    .footer-section p {
+        margin-bottom: 5px ;
+    }
+    .footer-section ul {
+        padding-left: 0;
+    }
+    .footer-section li {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer-section img {
+        width: 30px;
+        margin: 5px;
+        transition: transform 0.3s ease;
+    }
+
+    .footer-section img:hover {
+        transform: scale(1.2);
+    }
+
+    .footer-bottom{
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    /* 🖥️ MEDIA QUERY: Versión para escritorio */
+    @media (min-width: 768px) {
+
+        .menu-principal {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+        }
+
+        .menu-principal ul{
+            flex-direction: row;
+        }
+
+        .menu-principal a{
+            font-size: 20px;
+        }
+
+        .logo img {
+            max-width: 300px;
+        }
+
+        .intro p{
+            font-size: 20px;
+            margin-top: 50px;
+            margin: 50px 230px 0px;
+        }
+
+        .highlights {
+            grid-template-columns: repeat(3, 1fr);        
+            grid-template-rows: auto auto auto;
+            grid-template-areas:
+                "seccion1 seccion1 seccion1"
+                "seccion2 seccion2 seccion2"
+                "seccion3 seccion3 seccion3";
+        }
+
+        .highlight {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            padding: 30px;
+        }
+
+        .description-1 {
+            width: 300px;
+            font-size: 25px;
+        }
+
+        .description-1 h3, .description-1 p  {
+            margin-bottom: 0px !important;
+            margin-top: 10px !important;
+        }
+
+        .description-2 h3, .description-2 p  {
+            margin-bottom: 0px !important;
+            margin-top: 10px !important;
+        }
+
+        .description-2 {
+            order: 2;
+            width: 300px;
+            font-size: 25px;
+        }
+
+        .detalle-2 {
+            order: 1;
+        }
+
+        .detalle-3{
+            font-size: 25px;
+        }
+
+        .highlight video{
+            max-width: 800px;
+        }
+        
+        .carousel-item img {
+            max-height: 400px;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        .globarcard-container {
+            grid-template-columns: 1fr 2fr;
+        }
+
+        .globalform input{
+            width: 400px;
+        }
+    
+        .globalform textarea {
+            width: 700px;
+        }
+
+        .about-us {
+            grid-template-columns: 1fr 2fr;
+            grid-template-rows: auto auto;
+            grid-template-areas:
+                "seccion1 seccion1"
+                "seccion2 seccion2"
+                "seccion3 seccion3";
+        }
+
+        .about-experience {
+            display: flex;
+            flex-direction: row;
+        }
+    
+        .about-partners {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .about-experience .about-text{
+            order: 2;
+        }
+
+        .equipo-image img {
+            max-width: 500px;
+            max-height: 350px;
+            margin-bottom: 10px;
+        }
+
+        .packs {
+            grid-template-columns: repeat(4,1fr);
+        }
+
+        .galery {
+            grid-template-columns: repeat(3,1fr);
+        }
+
+        .galery img {
+            width: 360px;
+            height: 250px;
+        }
+
+        /* Ocultar botón menú en escritorio */
+        .menu-toggle {
+            display: none;
+        }
+
+        footer {
+            font-size: 17px;
+        }
+
+        footer h3{
+            font-size: 20px;
+        }
+
+        .footer-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: left;
+            gap: 100px;
+            flex-wrap: nowrap;
+        }
+
+    }
