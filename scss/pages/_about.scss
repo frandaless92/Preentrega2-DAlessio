@@ -1,0 +1,69 @@
+@use '../base/variables';
+
+/* Estilos para apartado Sobre Nosotros */
+.about-us {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "seccion1"
+        "seccion2"
+        "seccion3";
+    gap: 20px;
+    padding: 20px;
+}
+
+.about-text {
+    h3 {
+        color: variables.$violeta;
+        font-weight: bold;
+        text-decoration: underline;
+        text-align: center;
+    }
+
+    p {
+        text-align: justify;
+    }
+}
+
+.about-experience,
+.about-partners {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.about-partners {
+    background-color: variables.$violeta;
+    border-radius: 10px;
+    padding: 10px;
+
+    p, h3 {
+        color: variables.$blanco;
+    }
+}
+
+.about-image:hover {
+    transform: scale(1.25);
+}
+
+/* 🖥️ MEDIA QUERY: Versión para escritorio */
+@media (min-width: 768px) {
+    .about-us {
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            "seccion1 seccion1"
+            "seccion2 seccion2"
+            "seccion3 seccion3";
+    }
+
+    .about-experience,
+    .about-partners {
+        flex-direction: row;
+    }
+
+    .about-experience .about-text {
+        order: 2;
+    }
+}

@@ -1,0 +1,92 @@
+@use '../base/variables';
+
+/* ✅ FOOTER */
+footer {
+    font-size: 10px;
+    color: variables.$blanco;
+    background: variables.$negro;
+    padding: 20px;
+    text-align: left;
+
+    a {
+        text-decoration: none;
+        font-weight: 600;   
+        color: variables.$blanco;
+
+        &:hover {
+            color: variables.$rosa;
+        }
+    }
+
+    h3 {
+        font-size: 12px;
+        text-decoration: underline;
+    }
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.subfooter-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    flex-wrap: nowrap;
+    align-items: center;
+
+    p {
+        margin-bottom: 0px !important;
+    }
+}
+
+.footer-section {
+    p {
+        margin-bottom: 5px;
+    }
+
+    ul {
+        padding-left: 0;
+    }
+
+    li {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    img {
+        width: 30px;
+        margin: 5px;
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    footer {
+        font-size: 17px;
+
+        h3 {
+            font-size: 20px;
+        }
+    }
+
+    .footer-container {
+        flex-direction: row;
+        justify-content: left;
+        gap: 100px;
+        flex-wrap: nowrap;
+    }
+}

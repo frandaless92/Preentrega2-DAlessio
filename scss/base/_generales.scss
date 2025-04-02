@@ -1,0 +1,18 @@
+@use 'variables';
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+  }
+
+  /* Estilos globales */
+body {
+    background-color: variables.$negro;
+    color: variables.$blanco;
+    margin: 0;
+    padding: 0;
+}

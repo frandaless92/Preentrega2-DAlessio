@@ -1,0 +1,81 @@
+@use '../base/variables';
+
+/* Estilos apartado Servicios */
+.equipo-image {
+    img {
+        max-width: 360px;
+        max-height: 250px;
+        margin-bottom: 50px;
+    }
+}
+
+.equipo-container {
+    text-align: center;
+
+    h1 {
+        font-weight: bolder;
+    }
+
+    h2 {
+        font-weight: bold;
+    }
+}
+
+.subtitle {
+    font-style: italic;
+}
+
+.equipo, .packs, .info-extra {
+    background-color: variables.$violeta;
+    color: variables.$blanco;
+    border-radius: 15px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.packs {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    
+    h2 {
+        font-weight: bolder;
+    }
+
+    p {
+        margin-left: 15px;
+    }
+}
+
+.info-extra {
+    text-align: center;
+
+    h2 {
+        font-weight: bolder;
+    }
+}
+
+.extras {
+    ul {
+        padding-left: 0;
+    }
+
+    li {
+        list-style: none;
+    }
+}
+
+/* 🖥️ MEDIA QUERY: Versión para escritorio */
+@media (min-width: 768px) {
+    .equipo-image {
+        img {
+            max-width: 500px;
+            max-height: 350px;
+            margin-bottom: 10px;
+        }
+    }
+
+    .packs {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

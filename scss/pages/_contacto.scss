@@ -1,0 +1,93 @@
+@use '../base/variables';
+
+/* Estilo de Tarjeta Global */
+.globarcard-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.globalcard, .globalcard-form {
+    background-color: variables.$violeta;
+    color: variables.$blanco;
+    text-align: center;
+    align-content: center;
+    margin: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+.globalcard-form {
+    p {
+        font-weight: 600;
+    }
+}
+
+/* Estilo para el Formulario */
+.globalform {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+
+    input {
+        width: 200px;
+        text-align: center;
+    }
+
+    textarea {
+        resize: none;
+        width: 250px;
+    }
+
+    button {
+        color: variables.$blanco;
+        background-color: variables.$negro;
+        width: 100px;
+        
+        &:hover {
+            transform: scale(1.15);
+        }
+    }
+}
+
+.globalcard {
+    h2 {
+        text-decoration: underline;
+        font-weight: 600;
+        margin-bottom: 16px;
+    }
+
+    img {
+        width: 50px;
+        height: auto;
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: scale(1.25);
+        }
+    }
+}
+
+/* 🖥️ MEDIA QUERY: Versión para escritorio */
+@media (min-width: 768px) {
+    .globarcard-container {
+        grid-template-columns: 1fr 2fr;
+    }
+
+    .globalform {
+        input {
+            width: 400px;
+        }
+
+        textarea {
+            width: 700px;
+        }
+    }
+}
