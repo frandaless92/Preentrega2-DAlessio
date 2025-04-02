@@ -1,4 +1,5 @@
 @use '../base/variables';
+@use '../base/mixins';
 
 /* Estilos apartado Servicios */
 .equipo-image {
@@ -25,15 +26,12 @@
     font-style: italic;
 }
 
-.equipo, .packs, .info-extra {
-    background-color: variables.$violeta;
-    color: variables.$blanco;
-    border-radius: 15px;
-    margin: 10px;
-    padding: 10px;
+.info-extra, .equipo {
+    @include mixins.card-style(variables.$violeta);
 }
 
 .packs {
+    @include mixins.card-style(variables.$negro);
     display: grid;
     grid-template-columns: 1fr;
     gap: 10px;

@@ -1,0 +1,9 @@
+@use 'variables';
+
+@mixin card-style ($bg-color){
+    background-color: $bg-color;
+    color: variables.$blanco;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 10px;
+}
