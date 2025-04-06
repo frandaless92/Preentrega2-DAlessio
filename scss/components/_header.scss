@@ -1,4 +1,5 @@
 @use '../base/variables';
+@use '../base/animations';
 
 /* ENCABEZADO */
 header {
@@ -14,12 +15,17 @@ header {
 .logo {
     img {
         max-width: 150px;
+        opacity: 0;
+        animation: show 1.5s ease-in forwards, float 3s ease-in-out infinite 1.5s;
+        display: inline-block;
     }
 }
 
 /* Menú */
 .menu-principal {
     display: none;
+    animation: show 1.5s ease-in forwards;
+    opacity: 0;
 
     ul {
         list-style: none;
