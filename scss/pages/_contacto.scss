@@ -1,4 +1,5 @@
 @use '../base/variables';
+@use '../base/mixins';
 
 /* Estilo de Tarjeta Global */
 .globarcard-container {
@@ -9,18 +10,10 @@
 }
 
 .globalcard, .globalcard-form {
-    background-color: variables.$violeta;
-    color: variables.$blanco;
+    @include mixins.card-style(variables.$violeta);
     text-align: center;
     align-content: center;
-    margin: 20px;
-    padding: 15px;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-
-    &:hover {
-        transform: scale(1.05);
-    }
+    @include mixins.hover-scale(1.02);
 }
 
 .globalcard-form {
@@ -67,11 +60,7 @@
     img {
         width: 50px;
         height: auto;
-        transition: transform 0.3s ease;
-
-        &:hover {
-            transform: scale(1.25);
-        }
+        @include mixins.hover-scale(1.25);
     }
 }
 

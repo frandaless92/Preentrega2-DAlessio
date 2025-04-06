@@ -34,9 +34,7 @@
 }
 
 .about-partners {
-    background-color: variables.$violeta;
-    border-radius: 10px;
-    padding: 10px;
+    @include mixins.card-style(variables.$violeta);
 
     p, h3 {
         color: variables.$blanco;
@@ -44,7 +42,7 @@
 }
 
 .about-image:hover {
-    transform: scale(1.25);
+    @include mixins.hover-scale(1.25);
 }
 
 /* 🖥️ MEDIA QUERY: Versión para escritorio */

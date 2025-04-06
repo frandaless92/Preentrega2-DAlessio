@@ -1,4 +1,5 @@
 @use '../base/variables';
+@use '../base/mixins';
 
 /* SECCIÓN INTRO */
 .intro {
@@ -30,16 +31,9 @@
 
 /* Cada tarjeta */
 .highlight {
-    background: variables.$violeta;
-    color: variables.$blanco;
-    padding: 15px;
-    border-radius: 10px;
+    @include mixins.card-style(variables.$violeta);
+    @include mixins.hover-scale(1.05);
     text-align: center;
-    transition: transform 0.3s ease;
-
-    &:hover {
-        transform: scale(1.05);
-    }
 
     h3 {
         font-style: italic;

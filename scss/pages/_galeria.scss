@@ -1,13 +1,10 @@
 @use '../base/variables';
+@use '../base/mixins';
 
 /* Estilos para Galería */
 .galery-main {
     text-align: center;
-    color: variables.$blanco;
-    background-color: variables.$violeta;
-    border-radius: 15px;
-    padding: 15px;
-    margin: 15px;
+    @include mixins.card-style(variables.$violeta);
 
     h2 {
         font-weight: bolder;
@@ -31,11 +28,7 @@
     img {
         width: 300px;
         height: 220px;
-        transition: transform 0.3s ease;
-
-        &:hover {
-            transform: scale(1.2);
-        }
+        @include mixins.hover-scale(1.2);
     }
 }
 
