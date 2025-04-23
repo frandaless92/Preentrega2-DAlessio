@@ -13,5 +13,6 @@
   
     &:hover {
       transform: scale($factor);
+      z-index: 2;
     }
   }

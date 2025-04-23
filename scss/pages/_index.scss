@@ -50,15 +50,6 @@
     }
 }
 
-.reveal {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    &.visible{
-        animation: fade-slide-up 1.5s ease-out forwards;
-    }
-}
-
 .carousel-item img {
     max-height: 300px;
     object-fit: cover;

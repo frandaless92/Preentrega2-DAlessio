@@ -1,0 +1,16 @@
+@use 'extends' as *;
+
+/* Animaciones para revelar elementos */
+.reveal {
+    @extend %reveal-common;
+    &.visible{
+        animation: fade-slide-up 1.5s ease-out forwards;
+    }
+}
+
+.reveal2 {
+    @extend %reveal-common;
+    &.visible{
+        animation: boomerang-left 1.5s ease-out forwards;
+    }
+}

@@ -9,6 +9,12 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+     // Fijar en la parte superior
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 /* Logo */
@@ -34,6 +40,7 @@ header {
         flex-direction: column;
         align-items: center;
         gap: 10px;
+        margin-bottom: 0;
     }
 
     &.active {
@@ -77,13 +84,13 @@ header {
         }
 
         a {
-            font-size: 20px;
+            font-size: 16px;
         }
     }
 
     .logo {
         img {
-            max-width: 300px;
+            max-width: 200px;
         }
     }
     

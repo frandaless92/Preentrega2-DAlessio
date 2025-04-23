@@ -1,17 +1,49 @@
 @use '../base/variables';
 @use '../base/mixins';
 @use '../base/animations';
+@use '../base/extends' as *;
 
 /* Estilos apartado Servicios */
-.equipo-image {
-    img {
-        width: 100%;
-        height: 150px;
-        object-fit: cover;
-        object-position: center;
-        display: block;
-        opacity: 0;
-        transition: opacity 0.3s ease;
+.equipo-item {
+    position: relative;
+    width: 100%;
+    margin: auto;
+
+    .equipo-image {
+        position: relative;
+    
+        img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+    
+        .equipo-text {
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 20px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+    
+            h2 {
+            margin-bottom: 10px;
+            font-size: 2rem;
+            }
+    
+            p {
+            font-size: 1.1rem;
+            }
+        }
     }
 }
 
@@ -79,30 +111,18 @@
     }
 }
 
-.reveal {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    &.visible{
-        animation: fade-slide-up 1.5s ease-out forwards;
-    }
-}
-
-.reveal2 {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    &.visible{
-        animation: boomerang-left 1.5s ease-out forwards;
-    }
-}
-
 /* 🖥️ MEDIA QUERY: Versión para escritorio */
 @media (min-width: 768px) {
-    .equipo-image {
-        img {
+    .equipo-item {
+        .equipo-image {
+            img {
                 height: 400px;
-            }
+            }       
+        }
+        .equipo-text{
+            position: absolute;
+            background: rgba(0, 0, 0, 0.5); // fondo oscuro con transparencia
+        }
     }
 
     .packs {
