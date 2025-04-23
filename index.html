@@ -190,7 +190,7 @@
             threshold: 0.2
         });
 
-        document.querySelectorAll('.highlight h3, .highlight p, .footer-container').forEach(el => {
+        document.querySelectorAll('.highlight, .highlight h3, .highlight p, .footer-container').forEach(el => {
             el.classList.add('reveal');
             observer.observe(el);
         });
