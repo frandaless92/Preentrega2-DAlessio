@@ -68,16 +68,6 @@
     @include mixins.card-style(variables.$violeta);
 }
 
-.title {
-        opacity: 0;
-        transform: translateX(-200%);
-        transition: all 0.5s ease-out;
-    
-        &.visible {
-        animation: boomerang-left 1s ease-out forwards;
-        }
-}
-
 .packs {
     @include mixins.card-style(variables.$negro);
     display: grid;
